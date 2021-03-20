@@ -1,0 +1,66 @@
+.carousel .carousel__item {
+    display: none;
+}
+
+.carousel .carousel__item--visible {
+    display: block;
+    animation: fadeVisibility 2.5s;
+}
+
+@media (max-width: 576px) {
+    .carousel__actions {
+        position: absolute;     
+        padding-top: 175px;
+    }
+    .carousel-left {
+        padding-right: 40%;
+        margin-right: 90px;
+    }
+    .carousel-right {
+        padding-left: 40%;
+    }
+    .fa-chevron-right, .fa-chevron-left {
+        font-size: 3em !important;
+    }
+}
+
+.carousel .carousel__actions button {
+    border: none;
+    background-color: white;
+    color: rgba(196, 192, 192, 0.5);
+}
+
+.carousel .carousel__actions button:active,
+.carousel .carousel__actions button:hover {
+    color: rgba(51, 50, 50, 0.5);
+}
+
+.carousel .carousel-left button:hover {
+    transform: translateX(-8px);
+    transition: transform 0.5s;
+}
+
+.carousel .carousel-right button:hover {
+    transform: translateX(8px);
+    transition: transform 0.5s;
+}
+
+.carousel .carousel-right button:active,
+.carousel .carousel-left button:active {
+    transform: scale(0.8)
+}
+
+.carousel .carousel__actions button:focus {
+    outline: 0;
+    box-shadow: none!important;
+}
+
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: ease-out;
+    }
+}
